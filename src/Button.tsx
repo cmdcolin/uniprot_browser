@@ -6,7 +6,7 @@ export default function Button({
   id,
   className,
 }: {
-  onClick?: () => void
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
   id?: string
   className?: string
   type?: 'reset' | 'submit' | 'button' | undefined
