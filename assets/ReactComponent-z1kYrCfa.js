@@ -1,0 +1,2 @@
+import{o as a,j as n,p as r,c as u}from"./index-CGKDrrCR.js";import{B as d}from"./BaseDisplayComponent-DlBaLTOl.js";const h=a(function({model:t}){const e=r.getContainingView(t),s=Math.round(e.dynamicBlocks.totalWidthPx),o=t.height,i=u.useCallback(c=>{t.setRef(c)},[t,s,o]);return n.jsx("canvas",{"data-testid":"cloud-canvas",ref:i,style:{width:s,height:o,position:"absolute"},width:s*2,height:o*2})}),x=a(function({model:t}){return n.jsx(d,{model:t,children:n.jsx(h,{model:t})})});export{x as default};
+//# sourceMappingURL=ReactComponent-z1kYrCfa.js.map

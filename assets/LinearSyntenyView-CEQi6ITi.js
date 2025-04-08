@@ -1,0 +1,3 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./LinearSyntenyImportForm-CRVjmpYP.js","./index-CGKDrrCR.js","./index-DIqbght7.css","./index-CmLsXt2o.js","./Dialog-DMOWZHAH.js"])))=>i.map(i=>d[i]);
+import{o,j as t,c as e,_ as i}from"./index-CGKDrrCR.js";import a from"./LinearComparativeView-CGbeK8Au.js";import"./index-CmLsXt2o.js";import"./Dialog-DMOWZHAH.js";const n=e.lazy(()=>i(()=>import("./LinearSyntenyImportForm-CRVjmpYP.js"),__vite__mapDeps([0,1,2,3,4]),import.meta.url)),u=o(function({model:r}){return r.initialized?t.jsx(a,{model:r}):t.jsx(n,{model:r})});export{u as default};
+//# sourceMappingURL=LinearSyntenyView-CEQi6ITi.js.map

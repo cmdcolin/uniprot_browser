@@ -1,0 +1,2 @@
+import{i as c}from"./isNumber-CL2fNpTq.js";import{b as f,p as m}from"./util-B4Mu3MiR.js";function i(e){const t=e.split(":");return{refName:t[0],start:+t[1],end:+t[1]+1,strand:m(t[2])}}function S(e){const t=f(e),a=t[0].slice(1).split("	");return{columns:a.map(r=>({name:r})),rowSet:{rows:t.slice(1).map((r,p)=>{const s=r.split("	"),n=Object.fromEntries(a.map((u,o)=>[u,c(s[o])?+s[o]:s[o]]));return{cellData:n,feature:{uniqueId:`sf-${p}`,...i(n.LeftBreakpoint),mate:i(n.RightBreakpoint)}}})}}}export{S as parseSTARFusionBuffer};
+//# sourceMappingURL=STARFusionImport-DrM_dwK9.js.map
