@@ -1,2 +1,0 @@
-import{U as u,V as g,b0 as i,bj as p,bk as d,y as r,bl as S}from"./index-CGKDrrCR.js";function y(t){u(t,g(async()=>{try{if(!i.getContainingView(t).initialized)return;const{rpcManager:s}=i.getSession(t),{adapterConfig:a}=t,e=p();t.setSourcesLoading(e);const n=d.getRpcSessionId(t),c=await s.call(n,"MultiVariantGetSources",{sessionId:n,adapterConfig:a});r(t)&&t.setSources(c)}catch(o){!S(o)&&r(t)&&(console.error(o),i.getSession(t).notifyError(`${o}`,o))}},{delay:1e3}))}export{y as getMultiVariantSourcesAutorun};
-//# sourceMappingURL=getMultiVariantSourcesAutorun-JHzU-TNR.js.map

@@ -1,2 +1,0 @@
-import{o,j as n,p as c,c as h}from"./index-CGKDrrCR.js";import{B as p}from"./BaseDisplayComponent-DlBaLTOl.js";const u=o(function({model:t}){const e=c.getContainingView(t),s=Math.round(e.dynamicBlocks.totalWidthPx),a=t.height,i=h.useCallback(r=>{t.setRef(r)},[t,s,a]);return n.jsx("canvas",{"data-testid":"arc-canvas",ref:i,style:{width:s,height:a,position:"absolute"},width:s*2,height:a*2})}),l=o(function({model:t}){return n.jsx(p,{model:t,children:n.jsx(u,{model:t})})});export{l as default};
-//# sourceMappingURL=ReactComponent-BsIUziUM.js.map
