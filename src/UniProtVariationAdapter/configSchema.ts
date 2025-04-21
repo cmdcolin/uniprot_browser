@@ -1,10 +1,5 @@
 import { ConfigurationSchema } from '@jbrowse/core/configuration'
 
-/**
- * #config UniProtVariationAdapter
- */
-function x() {} // eslint-disable-line @typescript-eslint/no-unused-vars
-
 const UniProtVariationAdapter = ConfigurationSchema(
   'UniProtVariationAdapter',
   {
@@ -15,6 +10,9 @@ const UniProtVariationAdapter = ConfigurationSchema(
       type: 'fileLocation',
       defaultValue: { uri: '/path/to/my.bed.gz', locationType: 'UriLocation' },
     },
+    /**
+     * #slot
+     */
     scoreField: {
       type: 'string',
       defaultValue: '',

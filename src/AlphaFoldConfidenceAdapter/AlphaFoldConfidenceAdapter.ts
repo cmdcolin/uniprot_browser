@@ -1,15 +1,10 @@
-import {
-  BaseFeatureDataAdapter,
-  BaseOptions,
-} from '@jbrowse/core/data_adapters/BaseAdapter'
-import {
-  Feature,
-  Region,
-  SimpleFeature,
-  doesIntersect2,
-} from '@jbrowse/core/util'
+import { BaseFeatureDataAdapter } from '@jbrowse/core/data_adapters/BaseAdapter'
+import { SimpleFeature, doesIntersect2 } from '@jbrowse/core/util'
 import { openLocation } from '@jbrowse/core/util/io'
 import { ObservableCreate } from '@jbrowse/core/util/rxjs'
+
+import type { BaseOptions } from '@jbrowse/core/data_adapters/BaseAdapter'
+import type { Feature, Region } from '@jbrowse/core/util'
 
 export default class AlphaFoldConfidenceAdapter extends BaseFeatureDataAdapter {
   public static capabilities = ['getFeatures', 'getRefNames']
@@ -32,12 +27,12 @@ export default class AlphaFoldConfidenceAdapter extends BaseFeatureDataAdapter {
   }
 
   private async loadData(_opts: BaseOptions = {}) {
-    if (!this.feats) {
-      this.feats = this.loadDataP().catch((e: unknown) => {
+    this.feats =
+      this.feats ??
+      this.loadDataP().catch((error: unknown) => {
         this.feats = undefined
-        throw e
+        throw error
       })
-    }
 
     return this.feats
   }
@@ -58,6 +53,4 @@ export default class AlphaFoldConfidenceAdapter extends BaseFeatureDataAdapter {
       observer.complete()
     })
   }
-
-  public freeResources(): void {}
 }

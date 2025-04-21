@@ -127,7 +127,7 @@ export async function generateConfig(uniprotId: string) {
           init: {
             assembly: uniprotId,
             loc: uniprotId,
-            tracks: [uniprotId + '-Domain'],
+            tracks: [`${uniprotId}-Domain`],
           },
         },
       ],

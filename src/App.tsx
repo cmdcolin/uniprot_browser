@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react'
-import { createViewState, JBrowseApp } from '@jbrowse/react-app2'
+import { useEffect, useState } from 'react'
 
+import Plugin from '@jbrowse/core/Plugin'
 import { ErrorMessage } from '@jbrowse/core/ui'
-import PluginManager from '@jbrowse/core/PluginManager'
-import UniProtVariationAdapterF from './UniProtVariationAdapter'
+import { JBrowseApp, createViewState } from '@jbrowse/react-app2'
+
 import AlphaFoldConfidenceAdapterF from './AlphaFoldConfidenceAdapter'
 import AlphaMissensePathogenicityAdapterF from './AlphaMissensePathogenicityAdapter'
-import Plugin from '@jbrowse/core/Plugin'
-import { generateConfig } from './generateConfig'
 import Button from './Button'
+import UniProtVariationAdapterF from './UniProtVariationAdapter'
+import { generateConfig } from './generateConfig'
+
+import type PluginManager from '@jbrowse/core/PluginManager'
 
 type ViewModel = ReturnType<typeof createViewState>
 
@@ -23,11 +25,16 @@ class UniprotPlugin extends Plugin {
   configure() {}
 }
 
+interface JBrowseConfig {
+  assemblies: any[]
+  tracks: any[]
+}
+
 function View() {
   const [viewState, setViewState] = useState<ViewModel>()
   const [val, setVal] = useState('')
   const [error, setError] = useState<unknown>()
-  const [config, setConfig] = useState<any>()
+  const [config, setConfig] = useState<JBrowseConfig>()
 
   useEffect(() => {
     try {
@@ -35,14 +42,14 @@ function View() {
       if (config) {
         const state = createViewState({
           config,
-          // @ts-expect-error
           plugins: [UniprotPlugin],
         })
         setViewState(state)
+        // eslint-disable-next-line  @typescript-eslint/no-unsafe-call
         state.session.views[0].activateTrackSelector()
       }
-    } catch (e) {
-      setError(e)
+    } catch (error_) {
+      setError(error_)
     }
   }, [config])
 
@@ -53,18 +60,21 @@ function View() {
       {error ? <ErrorMessage error={error} /> : null}
 
       <form
-        onSubmit={async e => {
+        onSubmit={e => {
           e.preventDefault()
           setError(undefined)
-          try {
-            if (val) {
-              const conf = await generateConfig(val)
-              setConfig(conf)
+          // eslint-disable-next-line @typescript-eslint/no-floating-promises
+          ;(async () => {
+            try {
+              if (val) {
+                const conf = await generateConfig(val)
+                setConfig(conf)
+              }
+            } catch (error_) {
+              console.error(error_)
+              setError(error_)
             }
-          } catch (e) {
-            console.error(e)
-            setError(e)
-          }
+          })()
         }}
       >
         <label htmlFor="uniprot_id">Enter UniProt ID:</label>
@@ -73,20 +83,26 @@ function View() {
           className="bg-gray-200 shadow border rounded"
           id="uniprot_id"
           value={val}
-          onChange={event => setVal(event.target.value)}
+          onChange={event => {
+            setVal(event.target.value)
+          }}
         />
         <Button type="submit">Submit</Button>
         <Button
-          onClick={async e => {
-            try {
-              e.preventDefault()
-              const conf = await generateConfig('P05067')
-              setVal('P05067')
-              setConfig(conf)
-            } catch (e) {
-              console.error(e)
-              setError(e)
-            }
+          onClick={e => {
+            e.preventDefault()
+            setError(undefined)
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
+            ;(async () => {
+              try {
+                const conf = await generateConfig('P05067')
+                setVal('P05067')
+                setConfig(conf)
+              } catch (error_) {
+                console.error(error_)
+                setError(error_)
+              }
+            })()
           }}
         >
           Example

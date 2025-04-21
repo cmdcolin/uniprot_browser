@@ -1,17 +1,10 @@
-import {
-  BaseFeatureDataAdapter,
-  BaseOptions,
-} from '@jbrowse/core/data_adapters/BaseAdapter'
-import {
-  Feature,
-  Region,
-  SimpleFeature,
-  doesIntersect2,
-  max,
-  min,
-} from '@jbrowse/core/util'
+import { BaseFeatureDataAdapter } from '@jbrowse/core/data_adapters/BaseAdapter'
+import { SimpleFeature, doesIntersect2, max, min } from '@jbrowse/core/util'
 import { openLocation } from '@jbrowse/core/util/io'
 import { ObservableCreate } from '@jbrowse/core/util/rxjs'
+
+import type { BaseOptions } from '@jbrowse/core/data_adapters/BaseAdapter'
+import type { Feature, Region } from '@jbrowse/core/util'
 
 export default class AlphaMissensePathogenicityAdapter extends BaseFeatureDataAdapter {
   public static capabilities = ['getFeatures', 'getRefNames']
@@ -55,12 +48,12 @@ export default class AlphaMissensePathogenicityAdapter extends BaseFeatureDataAd
   }
 
   private async loadData(_opts: BaseOptions = {}) {
-    if (!this.feats) {
-      this.feats = this.loadDataP().catch((e: unknown) => {
+    this.feats =
+      this.feats ??
+      this.loadDataP().catch((error: unknown) => {
         this.feats = undefined
-        throw e
+        throw error
       })
-    }
 
     return this.feats
   }
