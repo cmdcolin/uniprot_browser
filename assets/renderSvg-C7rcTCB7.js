@@ -1,2 +1,0 @@
-import{I as i,b0 as o,j as n,bn as x,bm as g}from"./index-CT2bM4yV.js";async function j(t,e,r){await i(()=>!!t.regionCannotBeRenderedText);const{offsetPx:s}=o.getContainingView(t),{lineZoneHeight:a}=t;return n.jsx(n.Fragment,{children:n.jsxs("g",{transform:`translate(${Math.max(-s,0)})`,children:[n.jsx(x,{exportSVG:!0,model:t}),n.jsxs("g",{transform:`translate(0,${a})`,children:[n.jsx("g",{children:await r(e)}),n.jsx(g,{model:t,orientation:"left",exportSVG:!0})]})]})})}export{j as renderSvg};
-//# sourceMappingURL=renderSvg-C7rcTCB7.js.map

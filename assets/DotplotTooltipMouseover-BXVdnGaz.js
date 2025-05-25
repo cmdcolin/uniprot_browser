@@ -1,2 +1,0 @@
-import{o as x,j as i,bK as r}from"./index-CT2bM4yV.js";import{_ as f}from"./BaseTooltip-MqImlXuJ.js";const d=x(function({model:s,mouserect:o,mouserectClient:t,xdistance:n}){const{hview:e,vview:l,viewHeight:a}=s;return o?i.jsxs(f,{placement:n<0?"left":"right",clientPoint:t?{x:t[0],y:t[1]}:void 0,children:[`x - ${r(o[0],e)}`,i.jsx("br",{}),`y - ${r(a-o[1],l)}`,i.jsx("br",{})]}):null});export{d as default};
-//# sourceMappingURL=DotplotTooltipMouseover-BXVdnGaz.js.map

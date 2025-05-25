@@ -1,0 +1,2 @@
+import{z as o,u as i,j as t}from"./index-DRDIumvF.js";import{Y as s}from"./YScaleBars-CF28xy0b.js";import"./util-gs0FCK-c.js";async function d(r,e,n){await o(()=>!!r.stats&&!!r.regionCannotBeRenderedText);const{offsetPx:a}=i.getContainingView(r);return t.jsxs(t.Fragment,{children:[t.jsx("g",{children:await n(e)}),t.jsx("g",{transform:`translate(${Math.max(-a,0)})`,children:t.jsx(s,{model:r,orientation:"left",exportSVG:!0})})]})}export{d as renderSvg};
+//# sourceMappingURL=renderSvg-B3Zg0D90.js.map

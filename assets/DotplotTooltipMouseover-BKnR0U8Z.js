@@ -1,0 +1,2 @@
+import{o as x,j as s,a3 as p,b0 as i}from"./index-DRDIumvF.js";const f=x(function({model:n,mouserect:o,mouserectClient:t,xdistance:e}){const{hview:r,vview:a,viewHeight:l}=n;return o?s.jsxs(p,{placement:e<0?"left":"right",clientPoint:t?{x:t[0],y:t[1]}:void 0,children:[`x - ${i(o[0],r)}`,s.jsx("br",{}),`y - ${i(l-o[1],a)}`,s.jsx("br",{})]}):null});export{f as default};
+//# sourceMappingURL=DotplotTooltipMouseover-BKnR0U8Z.js.map
