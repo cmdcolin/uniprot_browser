@@ -80,7 +80,7 @@ function View() {
         <label htmlFor="uniprot_id">Enter UniProt ID:</label>
         <input
           type="text"
-          className="bg-gray-200 shadow border rounded"
+          className="bg-gray-200 shadow-sm border rounded-sm"
           id="uniprot_id"
           value={val}
           onChange={event => {

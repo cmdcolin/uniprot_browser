@@ -112,6 +112,8 @@ export async function generateConfig(uniprotId: string) {
               MultiDensityRenderer: {
                 type: 'MultiDensityRenderer',
                 bicolorPivotValue: 0.5,
+                posColor: 'red',
+                negColor: 'blue',
               },
             },
           },
