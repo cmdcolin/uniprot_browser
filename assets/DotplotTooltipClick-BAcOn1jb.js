@@ -1,2 +1,0 @@
-import{o as x,j as a,a3 as j,b0 as s}from"./index-DRDIumvF.js";const g=x(function({model:o,mousedown:r,mousedownClient:t,xdistance:l,ydistance:i}){const{hview:v,vview:c,viewHeight:p}=o,b=((t==null?void 0:t[0])||0)-(l<0,0),h=((t==null?void 0:t[1])||0)-(i<0,0);return r&&Math.abs(l)>3&&Math.abs(i)>3?a.jsxs(j,{placement:l<0?"right":"left",clientPoint:{x:b,y:h},children:[`x - ${s(r[0],v)}`,a.jsx("br",{}),`y - ${s(p-r[1],c)}`,a.jsx("br",{})]}):null});export{g as DotplotTooltipClick,g as default};
-//# sourceMappingURL=DotplotTooltipClick-BAcOn1jb.js.map

@@ -1,0 +1,2 @@
+import{o as x,j as s,a1 as p,aZ as i}from"./index-BXtJZUZx.js";const f=x(function({model:n,mouserect:o,mouserectClient:t,xdistance:a}){const{hview:e,vview:r,viewHeight:l}=n;return o?s.jsxs(p,{placement:a<0?"left":"right",clientPoint:t?{x:t[0],y:t[1]}:void 0,children:[`x - ${i(o[0],e)}`,s.jsx("br",{}),`y - ${i(l-o[1],r)}`,s.jsx("br",{})]}):null});export{f as default};
+//# sourceMappingURL=DotplotTooltipMouseover-BC4NH6w6.js.map

@@ -1,2 +1,0 @@
-import{z as o,u as i,j as t,aH as s}from"./index-DRDIumvF.js";async function d(e,n,r){await o(()=>!!e.regionCannotBeRenderedText);const{offsetPx:a}=i.getContainingView(e);return t.jsxs(t.Fragment,{children:[t.jsx("g",{children:await r(n)}),t.jsx("g",{transform:`translate(${Math.max(-a,0)})`,children:t.jsx(s,{model:e,orientation:"left",exportSVG:!0})})]})}export{d as renderSvg};
-//# sourceMappingURL=renderSvg-D2bkLQkH.js.map

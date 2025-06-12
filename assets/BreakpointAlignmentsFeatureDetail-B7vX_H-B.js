@@ -1,2 +1,0 @@
-import{bc as i,o,j as e,P as l}from"./index-DRDIumvF.js";var t=i();const f=o(function({model:s}){const{featureData:u}=s,{feature1:a,feature2:r}=structuredClone(u);return e.jsxs(l,{children:[e.jsx(t.BaseCoreDetails,{title:"Feature 1",feature:a}),e.jsx(t.BaseCoreDetails,{title:"Feature 2",feature:r}),e.jsx(t.BaseAttributes,{title:"Feature 1 attributes",feature:a}),e.jsx(t.BaseAttributes,{title:"Feature 2 attributes",feature:r})]})});export{f as default};
-//# sourceMappingURL=BreakpointAlignmentsFeatureDetail-B7vX_H-B.js.map

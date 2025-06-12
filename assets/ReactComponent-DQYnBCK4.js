@@ -1,2 +1,0 @@
-import{o,j as n,u as c,a as h}from"./index-DRDIumvF.js";import{B as u}from"./BaseDisplayComponent-hHmq3Zx6.js";const p=o(function({model:t}){const e=c.getContainingView(t),s=Math.round(e.dynamicBlocks.totalWidthPx),a=t.height,i=h.useCallback(r=>{t.setRef(r)},[t,s,a]);return n.jsx("canvas",{"data-testid":"arc-canvas",ref:i,style:{width:s,height:a,position:"absolute"},width:s*2,height:a*2})}),l=o(function({model:t}){return n.jsx(u,{model:t,children:n.jsx(p,{model:t})})});export{l as default};
-//# sourceMappingURL=ReactComponent-DQYnBCK4.js.map
