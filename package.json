@@ -10,7 +10,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postdeploy": "git push --follow-tags"
   },
   "dependencies": {
     "@emotion/react": "^11.10.8",
