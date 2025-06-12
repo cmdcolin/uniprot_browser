@@ -1,0 +1,2 @@
+import{z as i,u as x,j as n,Y as c}from"./index-DQP-8m57.js";async function d(t,a,e){await i(()=>!!t.stats&&!!t.regionCannotBeRenderedText);const{graphType:r,stats:s}=t,{offsetPx:o}=x.getContainingView(t);return n.jsxs(n.Fragment,{children:[n.jsx("g",{children:await e(a)}),r&&s?n.jsx("g",{transform:`translate(${Math.max(-o,0)})`,children:n.jsx(c,{model:t,orientation:"left"})}):null]})}export{d as renderSvg};
+//# sourceMappingURL=renderSvg-Bvf4Vtv3.js.map
