@@ -1,37 +1,18 @@
 import { useState } from 'react'
 
-import { ErrorMessage } from '@jbrowse/core/ui'
+import Button from './components/Button'
 
-import Button from './Button'
-import { generateConfig } from './generateConfig'
-import type { JBrowseConfig } from './types'
-
-function Header({ setConfig }: { setConfig: (config: JBrowseConfig) => void }) {
+function Header({ setUniprotId }: { setUniprotId: (str: string) => void }) {
   const [val, setVal] = useState('')
-  const [error, setError] = useState<unknown>()
 
   return (
     <>
       <h1 className="text-3xl">UniProt browser</h1>
 
-      {error ? <ErrorMessage error={error} /> : null}
-
       <form
         onSubmit={e => {
           e.preventDefault()
-          setError(undefined)
-          // eslint-disable-next-line @typescript-eslint/no-floating-promises
-          ;(async () => {
-            try {
-              if (val) {
-                const conf = await generateConfig(val)
-                setConfig(conf)
-              }
-            } catch (error_) {
-              console.error(error_)
-              setError(error_)
-            }
-          })()
+          setUniprotId(val)
         }}
       >
         <label htmlFor="uniprot_id">Enter UniProt ID:</label>
@@ -48,18 +29,7 @@ function Header({ setConfig }: { setConfig: (config: JBrowseConfig) => void }) {
         <Button
           onClick={e => {
             e.preventDefault()
-            setError(undefined)
-            // eslint-disable-next-line @typescript-eslint/no-floating-promises
-            ;(async () => {
-              try {
-                const conf = await generateConfig('P05067')
-                setVal('P05067')
-                setConfig(conf)
-              } catch (error_) {
-                console.error(error_)
-                setError(error_)
-              }
-            })()
+            setUniprotId('P05067')
           }}
         >
           Example

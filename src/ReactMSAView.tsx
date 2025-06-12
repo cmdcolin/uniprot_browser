@@ -6,8 +6,8 @@ import { observer } from 'mobx-react'
 import { isAlive } from 'mobx-state-tree'
 import { MSAView } from 'react-msaview'
 
-import Checkbox2 from './Checkbox2'
 import colorSchemes from './colorSchemes'
+import Checkbox2 from './components/Checkbox2'
 import AppModel from './model'
 
 // used in ViewContainer files to get the width

@@ -38,6 +38,7 @@
     "mobx": "^6.9.0",
     "mobx-react": "^9.0.1",
     "mobx-state-tree": "5.4.2",
+    "nuqs": "^2.4.3",
     "postcss": "^8.4.41",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -52,5 +53,8 @@
   "devDependencies": {
     "prettier": "^3.5.3",
     "typescript-eslint": "^8.30.1"
+  },
+  "resolutions": {
+    "vite": "npm:rolldown-vite@latest"
   }
 }
