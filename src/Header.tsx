@@ -30,9 +30,10 @@ function Header({ setUniprotId }: { setUniprotId: (str: string) => void }) {
           onClick={e => {
             e.preventDefault()
             setUniprotId('P05067')
+            setVal('P05067')
           }}
         >
-          Example
+          Example (APP)
         </Button>
       </form>
     </>
