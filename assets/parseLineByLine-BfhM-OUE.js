@@ -1,0 +1,2 @@
+import{by as y}from"./index-B3kPj2Rj.js";var i={},a;function h(){if(a)return i;a=1,Object.defineProperty(i,"__esModule",{value:!0}),i.parseLineByLine=c;const l=y();function c(e,d,L=()=>{}){const u=new TextDecoder("utf8");let n=0,t=0;for(;n<e.length;){const r=e.indexOf(10,n),o=r===-1?e.length:r,p=e.subarray(n,o),s=u.decode(p).trim();if(s&&d(s,t)===!1)break;t++%1e4===0&&L(`Loading ${(0,l.getProgressDisplayStr)(n,e.length)}`),n=o+1}}return i}var x=h();export{x as p};
+//# sourceMappingURL=parseLineByLine-BfhM-OUE.js.map

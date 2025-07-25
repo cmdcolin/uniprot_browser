@@ -1,2 +1,0 @@
-import{o as b,j as l,a1 as j,aZ as s}from"./index-DQP-8m57.js";const g=b(function({model:o,mousedown:r,mousedownClient:t,xdistance:a,ydistance:i}){const{hview:v,vview:c,viewHeight:p}=o,h=((t==null?void 0:t[0])||0)-(a<0,0),x=((t==null?void 0:t[1])||0)-(i<0,0);return r&&Math.abs(a)>3&&Math.abs(i)>3?l.jsxs(j,{placement:a<0?"right":"left",clientPoint:{x:h,y:x},children:[`x - ${s(r[0],v)}`,l.jsx("br",{}),`y - ${s(p-r[1],c)}`,l.jsx("br",{})]}):null});export{g as DotplotTooltipClick,g as default};
-//# sourceMappingURL=DotplotTooltipClick-DqIIn2Do.js.map

@@ -1,0 +1,2 @@
+import{z as o,u as i,j as t,ay as s}from"./index-B3kPj2Rj.js";async function d(e,n,r){await o(()=>!!e.regionCannotBeRenderedText);const{offsetPx:a}=i.getContainingView(e);return t.jsxs(t.Fragment,{children:[t.jsx("g",{children:await r(n)}),t.jsx("g",{transform:`translate(${Math.max(-a,0)})`,children:t.jsx(s,{model:e,orientation:"left",exportSVG:!0})})]})}export{d as renderSvg};
+//# sourceMappingURL=renderSvg-D9RLQcUg.js.map
