@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { ErrorMessage } from '@jbrowse/core/ui'
 import { JBrowseApp, createViewState } from '@jbrowse/react-app2'
@@ -13,7 +13,6 @@ import type { JBrowseConfig } from './types'
 export type ViewModel = ReturnType<typeof createViewState>
 
 function View() {
-  const [viewState, setViewState] = useState<ViewModel>()
   const [config, setConfig] = useState<JBrowseConfig>()
   const [error, setError] = useState<unknown>()
   const [uniprotId, setUniprotId] = useQueryState('id', { defaultValue: '' })
@@ -27,22 +26,28 @@ function View() {
     })
   }, [uniprotId])
 
+  const viewState = useMemo(() => {
+    if (!config) {
+      return null
+    }
+    return createViewState({
+      config,
+      plugins: [UniprotPlugin],
+    })
+  }, [config])
+
   useEffect(() => {
     try {
-      if (config) {
-        const state = createViewState({
-          config,
-          plugins: [UniprotPlugin],
-        })
-        setViewState(state)
+      if (viewState) {
         // eslint-disable-next-line  @typescript-eslint/no-unsafe-call
-        state.session.views[0].activateTrackSelector()
+        viewState.session.views[0].activateTrackSelector()
       }
     } catch (error_) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setError(error_)
       console.error(error_)
     }
-  }, [config])
+  }, [viewState])
 
   return (
     <>
