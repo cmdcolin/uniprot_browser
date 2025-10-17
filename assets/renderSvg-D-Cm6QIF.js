@@ -1,0 +1,2 @@
+import{u as s,j as t}from"./index-DPMJgfAS.js";import{A as e}from"./Arcs-DkhlUNvh.js";async function d(i,h){await s.when(()=>!i.loading);const n=s.getContainingView(i).dynamicBlocks.totalWidthPx,c=i.height,r=`arc-${i.id}`;return t.jsxs(t.Fragment,{children:[t.jsx("defs",{children:t.jsx("clipPath",{id:r,children:t.jsx("rect",{x:0,y:0,width:n,height:c})})}),t.jsx("g",{clipPath:`url(#${r})`,children:t.jsx(e,{model:i,exportSVG:!0})})]})}export{d as renderArcSvg};
+//# sourceMappingURL=renderSvg-D-Cm6QIF.js.map

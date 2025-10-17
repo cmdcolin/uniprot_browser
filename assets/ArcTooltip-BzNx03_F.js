@@ -1,2 +1,0 @@
-import{o as s,j as t,a as r,a1 as i,c as e}from"./index-B3kPj2Rj.js";const a=r.forwardRef(function({message:o},l){return t.jsx("div",{ref:l,children:r.isValidElement(o)?o:o?t.jsx(e.SanitizedHTML,{html:String(o)}):null})}),c=s(function({contents:n}){return n?t.jsx(r.Suspense,{fallback:null,children:t.jsx(i,{children:t.jsx(a,{message:n})})}):null});export{c as default};
-//# sourceMappingURL=ArcTooltip-BzNx03_F.js.map

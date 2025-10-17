@@ -1,0 +1,2 @@
+import{z as i,u as o,j as n,aH as x,ax as g}from"./index-DPMJgfAS.js";async function j(t,e,r){await i(()=>!!t.regionCannotBeRenderedText);const{offsetPx:a}=o.getContainingView(t),{lineZoneHeight:s}=t;return n.jsx(n.Fragment,{children:n.jsxs("g",{transform:`translate(${Math.max(-a,0)})`,children:[n.jsx(x,{exportSVG:!0,model:t}),n.jsxs("g",{transform:`translate(0,${s})`,children:[n.jsx("g",{children:await r(e)}),n.jsx(g,{model:t,orientation:"left",exportSVG:!0})]})]})})}export{j as renderSvg};
+//# sourceMappingURL=renderSvg-CRa6oM8-.js.map
